@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>hospice Information</h1>
+  {% if hospice_list %}
+  <table border>
+    {% for hospice in hospice_list %}
+      <tr>
+       <td> {{ hospice.name}}</td><td> {{ hospice.city}}</td> <td>{{hospice.Address}}</td><td>{{hospice.estdt}}</td><td>{{hospice.website}}</td>
+       </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no hospice .</p>
+  {% endif %}
+{% endblock %}

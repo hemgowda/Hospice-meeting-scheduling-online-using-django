@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>Admit Information</h1>
+  {% if admit_list %}
+  <table border>
+    {% for Admit in admit_list %}
+      <tr>
+       <td> {{ Admit.hsp}}</td><td> {{ Admit.pname}}</td> <td>{{Admit.admit_date}}</td>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no Admit .</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>Patient Information</h1>
+  {% if patient_list %}
+  <table border>
+    {% for Patient in patient_list %}
+      <tr>
+       <td> {{ Patient.name}}</td><td> {{ Patient.pno}}</td> <td>{{Patient.disease}}</td><td>{{Patient.age}}</td>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no Patient .</p>
+  {% endif %}
+{% endblock %}
